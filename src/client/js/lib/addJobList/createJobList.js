@@ -23,17 +23,10 @@ const createJobList = (data)=>{
     jobInfoDiv.appendChild(companyNameDiv);
     jobInfoDiv.appendChild(jobTitleDiv);
 
-    let jobCreatedTimeStampDiv = document.createElement('div');
-    text=`<p>Added ago</p>`;
-    jobCreatedTimeStampDiv.innerHTML= text;
-
     jobInfoDiv.classList.add('job-info');
-    jobCreatedTimeStampDiv.classList.add('job-created');
-    
     
     let jobListDiv = document.createElement('div');
     jobListDiv.appendChild(jobInfoDiv);
-    jobListDiv.appendChild(jobCreatedTimeStampDiv);
     jobListDiv.classList.add('job-list');
     jobListDiv.setAttribute('id',data.id);
     jobListDiv.style.background=`${data.color}`;
