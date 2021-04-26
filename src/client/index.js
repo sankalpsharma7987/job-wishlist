@@ -14,6 +14,7 @@ import './styles/job-list.scss';
 import {showFormModal,hideFormModal} from './js/showFormModal';
 import {clearUI} from './js/lib/misc/clearUI';
 import {generateId} from './js/lib/misc/generateId';
+import {generateRandomColor} from './js/lib/misc/generateRandomColor'
 import {getJobInfo} from './js/getJobInfo';
 import {fetchJobList} from './js/lib/addJobList/fetchJobList';
 import {postJobList} from './js/lib/addJobList/postJobList';
@@ -23,6 +24,6 @@ import {updateJobSummary} from './js/lib/addJobList/updateJobSummary';
 import {updateErrorUI} from './js/lib/error/updateErrorUI';
 import {loadJobList} from './js/lib/addJobList/loadJobList';
 
-export {showFormModal,hideFormModal,clearUI,generateId,updateErrorUI,getJobInfo,fetchJobList,postJobList,createJobList,updateJobListClass,updateJobSummary,
+export {showFormModal,hideFormModal,clearUI,generateId,generateRandomColor,updateErrorUI,getJobInfo,fetchJobList,postJobList,createJobList,updateJobListClass,updateJobSummary,
     loadJobList};
 

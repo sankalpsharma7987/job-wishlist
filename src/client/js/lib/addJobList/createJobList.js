@@ -36,7 +36,8 @@ const createJobList = (data)=>{
     jobListDiv.appendChild(jobCreatedTimeStampDiv);
     jobListDiv.classList.add('job-list');
     jobListDiv.setAttribute('id',data.id);
-
+    jobListDiv.style.background=`${data.color}`;
+    jobListDiv.style.border= `1px solid ${data.color}`;
     fragment.appendChild(jobListDiv);
     return fragment;
 

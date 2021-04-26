@@ -10,7 +10,10 @@ const getJobInfo = async(e)=>{
 
     try {
         const id = Client.generateId();
-        await Client.postJobList({id,companyName:$COMPANY_NAME_ELEMENT.value,jobTitle:$JOB_TITLE_ELEMENT.value});
+                
+        const uniqueColorCode = Client.generateRandomColor();
+        
+        await Client.postJobList({id,companyName:$COMPANY_NAME_ELEMENT.value,jobTitle:$JOB_TITLE_ELEMENT.value,color:uniqueColorCode});
         const jobObjectArray = await Client.fetchJobList();
         await Client.updateJobListClass(jobObjectArray);
         await Client.updateJobSummary();
