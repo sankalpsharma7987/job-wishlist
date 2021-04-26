@@ -1,0 +1,44 @@
+.element-class {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.job-add-class {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.add-button-class {
+    padding: 4px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: #adadad;
+    width: 40vw;
+    border: 1px solid;
+    border-radius: 0.25em;
+    border: 1px solid lightslategray;
+
+    &:hover {
+        cursor:pointer;
+        background: white;
+        color: #adadad;
+    }
+
+}
+
+@media screen and (min-width: 600px)
+{   
+    .add-button-class{
+        width: 200px;
+    }
+
+}
+

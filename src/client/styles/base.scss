@@ -1,0 +1,31 @@
+body {
+    font-family:sans-serif;
+    // background: #ece9e9;
+    background: #fafafa;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 16px;
+}
+
+section {
+    margin-bottom: 16px;
+}
+
+.box {
+    border: 1px solid red;
+}
+
+
+.close-button-class{
+    position: fixed;
+    right: 35px;
+    top: 15px;
+    font-size: 2em;
+    color: lightslategray;
+
+}
