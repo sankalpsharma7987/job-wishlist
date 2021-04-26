@@ -9,6 +9,9 @@
         <title> Job WishList </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         
     </head>
 
@@ -17,7 +20,8 @@
         <header>
 
             <h2> My Job WishList </h2>
-            <h3> 4 Jobs </h3>
+
+            <h3 id="job-summary-id">  </h3>
 
         </header>
 
@@ -29,18 +33,22 @@
                     <div class="add-button-class"> + </div>
                 </div>
 
+                <div class="error-class">
+
+                </div>
+
                 <div class="form-modal-class">
                     
                     <div class="close-button-class">
                         <span id="form-close-btn-id">&times;</span>
                     </div>
 
-                    <form>
+                    <form id="form" >
                         <div class="form-class">
                             <label> <h2>Add a Job</h2> </label>
                             <input type="text" placeholder="Company Name" id="company-name-id" class="form-element-class" required autofocus>
                             <input type="text" placeholder="Job Title" id="job-title-id" class="form-element-class" required>
-                            <button type="submit">Continue</button>
+                            <button type="submit" id="submit-button-id">Continue</button>
                         </div>
                     </form>   
 

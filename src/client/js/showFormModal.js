@@ -14,7 +14,7 @@ const showFormModal = ()=>{
 
 const hideFormModal = (e)=>{
 
-    if(e.target.nodeName==='SPAN')
+    if(e.target.nodeName==='SPAN'||e.target.nodeName==='BUTTON')
     {
         $FORM_MODAL_ELEMENT.classList.remove('form-modal-class-display');
         $ADD_BUTTON_ELEMENT.removeAttribute('disabled');
@@ -26,3 +26,5 @@ const hideFormModal = (e)=>{
 
 $FORM_CLOSE_BUTTON_ELEMENT.addEventListener('click',hideFormModal);
 $ADD_BUTTON_ELEMENT.addEventListener('click',showFormModal);
+
+module.exports = {showFormModal,hideFormModal};

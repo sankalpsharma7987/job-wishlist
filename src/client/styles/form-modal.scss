@@ -48,6 +48,9 @@
             border: 1px solid #940594;
         }
 
+        ::before {
+            content: "\f002"
+        }
     }
 
     label{
