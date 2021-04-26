@@ -24,6 +24,9 @@ import {updateJobSummary} from './js/lib/addJobList/updateJobSummary';
 import {updateErrorUI} from './js/lib/error/updateErrorUI';
 import {loadJobList} from './js/lib/addJobList/loadJobList';
 
+import {removeJobList} from './js/lib/deleteJobList/removeJobList';
+import {deleteJobInfo} from './js/deleteJobInfo';
+
 export {showFormModal,hideFormModal,clearUI,generateId,generateRandomColor,updateErrorUI,getJobInfo,fetchJobList,postJobList,createJobList,updateJobListClass,updateJobSummary,
-    loadJobList};
+    loadJobList,removeJobList,deleteJobInfo};
 

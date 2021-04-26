@@ -4,10 +4,14 @@ const updateJobListClass = async(dataObject)=>{
 
     $JOB_LIST_ELEMENT.innerHTML = "";
     
-    dataObject.forEach(data=>{
-        const fragment = Client.createJobList(data)
-        $JOB_LIST_ELEMENT.appendChild(fragment);
-    })
+    if(dataObject)
+    {
+        dataObject.forEach(data=>{
+            const fragment = Client.createJobList(data)
+            $JOB_LIST_ELEMENT.appendChild(fragment);
+        })
+    
+    }
 }
 
 

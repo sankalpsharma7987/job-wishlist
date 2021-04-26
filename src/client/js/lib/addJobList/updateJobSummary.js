@@ -1,18 +1,22 @@
-const updateJobSummary = async()=>{
+const updateJobSummary = async(jobObjectArrayLength)=>{
     try{
         const $SUMMARY_ELEMENT = document.querySelector('#job-summary-id');
     
-    const data = Client.fetchJobList();
+        if(jobObjectArrayLength>0)
+        {   
+            $SUMMARY_ELEMENT.innerText=`${jobObjectArrayLength} Jobs`;
+        }
+        else {
+            $SUMMARY_ELEMENT.innerText=`No Jobs Saved`;
+        }
 
-    data?$SUMMARY_ELEMENT.innerText=`${data.length} Jobs`:$SUMMARY_ELEMENT.innerText=`No Jobs Saved`;
     }
     catch(e)
-    {
+    {   console.log(e);
         Client.updateErrorUI('Error updating Job Summary');
     }
     
     
 }
 
-window.addEventListener('load',updateJobSummary);
 module.exports = {updateJobSummary};

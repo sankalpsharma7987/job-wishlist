@@ -16,7 +16,7 @@ const getJobInfo = async(e)=>{
         await Client.postJobList({id,companyName:$COMPANY_NAME_ELEMENT.value,jobTitle:$JOB_TITLE_ELEMENT.value,color:uniqueColorCode});
         const jobObjectArray = await Client.fetchJobList();
         await Client.updateJobListClass(jobObjectArray);
-        await Client.updateJobSummary();
+        await Client.updateJobSummary(jobObjectArray.length);
         Client.hideFormModal(e);
         Client.clearUI();
     }
