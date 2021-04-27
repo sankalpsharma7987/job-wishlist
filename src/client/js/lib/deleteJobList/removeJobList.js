@@ -1,3 +1,4 @@
+/* Helper function to delete the item from the array in localStorage */
 const removeJobList = async(id)=>{
 
     

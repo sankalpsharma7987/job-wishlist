@@ -1,3 +1,6 @@
+/*Helper function that is used to create the job list elements and append it to the fragment object.
+This fragment object returned is then rendered by the calling function to the job list class element */
+
 const createJobList = (data)=>{
 
     let fragment = document.createDocumentFragment();
@@ -19,9 +22,9 @@ const createJobList = (data)=>{
     jobDeleteDiv.innerHTML = text;
     jobDeleteDiv.classList.add('job-delete');
 
-    jobInfoDiv.appendChild(jobDeleteDiv);
     jobInfoDiv.appendChild(companyNameDiv);
     jobInfoDiv.appendChild(jobTitleDiv);
+    jobInfoDiv.appendChild(jobDeleteDiv);
 
     jobInfoDiv.classList.add('job-info');
     

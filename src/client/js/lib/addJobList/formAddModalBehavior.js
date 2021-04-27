@@ -1,24 +1,22 @@
+/*Helper function to show and hide form modal use to enter the job wish list details */
+
 const $ADD_BUTTON_ELEMENT = document.querySelector('.add-button-class');
-const $FORM_MODAL_ELEMENT = document.querySelector('.form-modal-class');
+const $FORM_MODAL_ELEMENT = document.querySelector('#add-form-modal-id');
 const $FORM_CLOSE_BUTTON_ELEMENT = document.querySelector('#form-close-btn-id');
-const $HEADER_ELEMENT = document.querySelector('.header-class');
-const $SUMMARY_ELEMENT = document.querySelector('.summary-class');
 
 
 const showFormModal = ()=>{
 
     $FORM_MODAL_ELEMENT.classList.add('form-modal-class-display');
     $ADD_BUTTON_ELEMENT.setAttribute('disabled',true);
-    // $HEADER_ELEMENT.classList.add('header-color');
 }
 
 const hideFormModal = (e)=>{
 
-    if(e.target.nodeName==='SPAN'||e.target.nodeName==='BUTTON')
+    if(e.target.nodeName==='SPAN'||e.target.nodeName==='BUTTON') //The modal is closed if the click occurs from the SPAN tag, which is the cross button, or the add button
     {
         $FORM_MODAL_ELEMENT.classList.remove('form-modal-class-display');
         $ADD_BUTTON_ELEMENT.removeAttribute('disabled');
-        // $HEADER_ELEMENT.classList.remove('header-color');
     }   
 
     

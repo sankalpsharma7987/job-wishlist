@@ -1,3 +1,5 @@
+/* Helper function to load the job list everytime page is loaded */
+
 const loadJobList = async()=>{
 
     const jobListArray = Client.fetchJobList();

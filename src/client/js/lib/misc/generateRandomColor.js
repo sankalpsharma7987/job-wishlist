@@ -1,3 +1,5 @@
+/* Helper functions to return a random hexadecimal value for every new job list elements */
+
 const generateRandomColor = ()=>{
 
     const index = Math.floor(Math.random()*5);

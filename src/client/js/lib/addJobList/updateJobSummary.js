@@ -1,3 +1,5 @@
+/* Helper function to update the total jobs in the wishlist */
+
 const updateJobSummary = async(jobObjectArrayLength)=>{
     try{
         const $SUMMARY_ELEMENT = document.querySelector('#job-summary-id');

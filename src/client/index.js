@@ -5,13 +5,15 @@ import './styles/header.scss';
 import './styles/element.scss';
 import './styles/form-modal.scss';
 import './styles/job-list.scss';
+import './styles/delete-button.scss';
 
 //Media Queries
 
 
 //Javascript
 
-import {showFormModal,hideFormModal} from './js/showFormModal';
+import {showFormModal,hideFormModal} from './js/lib/addJobList/formAddModalBehavior';
+import {showDeleteFormModal,hideDeleteFormModal} from './js/lib/deleteJobList/formDeleteModalBehavior';
 import {clearUI} from './js/lib/misc/clearUI';
 import {generateId} from './js/lib/misc/generateId';
 import {generateRandomColor} from './js/lib/misc/generateRandomColor'
@@ -25,8 +27,9 @@ import {updateErrorUI} from './js/lib/error/updateErrorUI';
 import {loadJobList} from './js/lib/addJobList/loadJobList';
 
 import {removeJobList} from './js/lib/deleteJobList/removeJobList';
+import {deleteJobList} from './js/lib/deleteJobList/deleteJobList';
 import {deleteJobInfo} from './js/deleteJobInfo';
 
-export {showFormModal,hideFormModal,clearUI,generateId,generateRandomColor,updateErrorUI,getJobInfo,fetchJobList,postJobList,createJobList,updateJobListClass,updateJobSummary,
-    loadJobList,removeJobList,deleteJobInfo};
+export {showFormModal,hideFormModal,showDeleteFormModal,hideDeleteFormModal,clearUI,generateId,generateRandomColor,updateErrorUI,getJobInfo,fetchJobList,postJobList,createJobList,updateJobListClass,updateJobSummary,
+    loadJobList,removeJobList,deleteJobList,deleteJobInfo};
 

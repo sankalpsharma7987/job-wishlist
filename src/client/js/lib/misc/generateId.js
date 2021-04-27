@@ -1,3 +1,5 @@
+/* Helper functions to generate id for every new job list */
+
 const generateId = ()=>{
 
     let uniqueId ="";

@@ -1,3 +1,5 @@
+/* Helper functions to clear the add form elements */
+
 const $JOB_TITLE_ELEMENT = document.querySelector('#job-title-id');
 const $COMPANY_NAME_ELEMENT = document.querySelector('#company-name-id');
 
