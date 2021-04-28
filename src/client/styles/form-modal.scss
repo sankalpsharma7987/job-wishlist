@@ -34,7 +34,7 @@
     border-radius: 0.5em;
     z-index: 200;
     padding: 8px;
-    grid-gap: 16px;
+    margin-bottom: 16px;
     background: white;
 
     .form-element-class {
@@ -43,6 +43,7 @@
         padding: inherit;
         border-radius: 0.25em;
         border: 1px solid lightgray;
+        margin-bottom: 16px;
         &:focus {
             outline: none;
             border: 1px solid #940594;
