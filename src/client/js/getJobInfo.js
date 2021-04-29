@@ -11,16 +11,25 @@ const getJobInfo = async(e)=>{
     Client.updateErrorUI("");
 
     try {
-        const id = Client.generateId();
+        if($COMPANY_NAME_ELEMENT.value&&$JOB_TITLE_ELEMENT.value)   
+        {   
+            console.log('Value found')
+            const id = Client.generateId();
                 
-        const uniqueColorCode = Client.generateRandomColor();
-        
-        await Client.postJobList({id,companyName:$COMPANY_NAME_ELEMENT.value,jobTitle:$JOB_TITLE_ELEMENT.value,color:uniqueColorCode});
-        const jobObjectArray = await Client.fetchJobList(); //After the job is posted to the local storage, the fetchList will fetch the updated Local Storage.
-        await Client.updateJobListClass(jobObjectArray); //Update List of Jobs
-        await Client.updateJobSummary(jobObjectArray.length); //Update Total job created
-        Client.hideFormModal(e);
-        Client.clearUI();
+            const uniqueColorCode = Client.generateRandomColor();
+            
+            await Client.postJobList({id,companyName:$COMPANY_NAME_ELEMENT.value,jobTitle:$JOB_TITLE_ELEMENT.value,color:uniqueColorCode});
+            const jobObjectArray = await Client.fetchJobList(); //After the job is posted to the local storage, the fetchList will fetch the updated Local Storage.
+            await Client.updateJobListClass(jobObjectArray); //Update List of Jobs
+            await Client.updateJobSummary(jobObjectArray.length); //Update Total job created
+            Client.hideFormModal(e);
+            Client.clearUI();
+    
+        }
+        else {
+            Client.hideFormModal(e);
+            Client.updateErrorUI('Invalid job details. Please enter again.')
+        }
     }
     catch(error)
     {   
